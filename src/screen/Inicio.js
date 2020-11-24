@@ -51,7 +51,6 @@ const Inicio = () => {
                     <Icon name="search" />
                 </Button>
             </Header>
-            <H1 style={{ marginTop: 20 }}>VideoJuegos</H1>
             <Image
                 source={require("../../assets/logo.png")}
                 style={styles.logoApp}
