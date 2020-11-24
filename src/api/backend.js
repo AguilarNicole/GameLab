@@ -1,5 +1,5 @@
 import axios from "axios";
-import getEnvVars from "../../enviroment";
+import getEnvVars from "../../environment";
 
 const { apiUrl } = getEnvVars();
 const instance = axios.create({

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
 import { Input, Container, Form, Item, H1, Button, Header, Icon} from "native-base";
 import backend from "../api/backend";
-import getEnvVars from "../../enviroment";
+import getEnvVars from "../../environment";
 
 const { apikey } = getEnvVars();
 
@@ -42,7 +42,7 @@ const Inicio = () => {
             </Header>
             <H1 style={{ marginTop: 20 }}>VideoJuegos</H1>
             <Image
-                source={require("../../assets/Logo.jpeg")}
+                source={require("../../assets/logo.png")}
                 style={styles.logoApp}
     
             />
