@@ -11,3 +11,6 @@ web-build/
 
 # macOS
 .DS_Store
+
+//variable de entorno
+enviroment.js
