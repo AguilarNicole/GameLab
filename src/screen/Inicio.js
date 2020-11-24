@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Image, Dimensions, FlatList } from "react-native";
-import { Input, Container, Form, Item, H1, Button, Header, Icon, Spinner, Card, CardItem, Body } from "native-base";
+import { Input, Container, Form, Item, H1, Button, Header, Icon, Spinner, Card, CardItem, Body, Content } from "native-base";
 import backend from "../api/backend";
 import getEnvVars from "../../environment";
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
@@ -35,15 +35,17 @@ const Inicio = () => {
 
     if (!inicio) {
         return (
-            <View style={{ flex: 1, justifyContent: "center" }}>
+            <View style={{ flex: 1, justifyContent: "center", backgroundColor: "#000000" }}>
                 <Spinner color="blue" />
             </View>
         )
     }
     return (
 
-        <Container backgroundColor="#000000">
-            <Header searchBar>
+        <Container>
+            <Content style={{backgroundColor: "#000000"}}>
+                
+            <Header searchBar style={{backgroundColor: "#333333"}}>
                 <Item >
                     <Input placeholder="Buscar" />
                 </Item>
@@ -57,11 +59,11 @@ const Inicio = () => {
 
             />
 
-            <H1 style={{ marginTop: 20 }}>VideoJuegos</H1>
+            <H1 style={{ marginTop: 20, color: "wheat"}}>VideoJuegos</H1>
             <FlatList
                 data={inicio.count}
                 keyExtractor={(item) => item.id}
-                ListEmptyComponent={<Text>¡Error504! No hay Juegos</Text>}
+                ListEmptyComponent={<Text style={{color: "wheat"}}>¡Error504! No hay Juegos</Text>}
                 renderItem={({ item }) => {
                     return (
                         <View>
@@ -81,6 +83,7 @@ const Inicio = () => {
                 }}
             />
 
+            </Content>
         </Container>
     );
 
@@ -117,8 +120,9 @@ const styles = StyleSheet.create({
         marginRight: 15,
     },
     logoApp: {
+        marginTop: 0,
         width: width,
-        height: height * 0.20,
+        height: height * 0.25,
         /* resizeMode: "contain" */
 
     }
