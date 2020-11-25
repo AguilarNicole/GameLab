@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Image, Dimensions, FlatList } from "react-native";
 import { Input, Container, Form, Item, H1, Button, Header, Icon, Spinner, Card, CardItem, Body, Content } from "native-base";
 import backend from "../api/backend";
-import getEnvVars from "../../environment";
-import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import getEnvVars from "../../enviroment";
+/* import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes"; */
 
 const { apikey, apiImageUrl, apiImageSize } = getEnvVars();
 

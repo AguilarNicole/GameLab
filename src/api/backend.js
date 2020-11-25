@@ -1,5 +1,5 @@
 import axios from "axios";
-import getEnvVars from "../../environment";
+import getEnvVars from "../../enviroment";
 
 //Crear una instancia de conexion va ser igual paara toda a aplicacion
 const { apiUrl } = getEnvVars();
