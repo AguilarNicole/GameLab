@@ -46,7 +46,7 @@ const Inicio = () => {
             <Content style={{backgroundColor: "#000000"}}>
                 
             <Header searchBar style={{backgroundColor: "#333333"}}>
-                <Item >
+                <Item style={{ flex: 3}}>
                     <Input placeholder="Buscar" />
                 </Item>
                 <Button icon>
@@ -62,20 +62,25 @@ const Inicio = () => {
             <H1 style={{ marginTop: 20, color: "wheat"}}>VideoJuegos</H1>
             <FlatList
                 data={inicio.count}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => item.id.toString()}
                 ListEmptyComponent={<Text style={{color: "wheat"}}>¡Error504! No hay Juegos</Text>}
                 renderItem={({ item }) => {
                     return (
                         <View>
                             <Card>
-                                <CardItem>
-                                    <Body>
+                                <CardItem cardBody>
+                                <Image 
+                                source={{ 
+                                    uri:`${apiImageUrl}${apiImageSize}${item.background_image}`,}} style={styles.gamesimage} />
+                                    <CardItem>
+                                    <Body style={{ flex: 1, flexDirection: "row"}}>
                                         {/* {console.log(`${apiImageUrl}${apiImageSize}${item.background_image}`)} */}
-                                        <Image source={`${apiImageUrl}${apiImageSize}${item.background_image}`} style={styles.gamesimage} />
+                                       
                                         <H3>{item.name}</H3>
                                         <Text>{item.rating}</Text>
                                     </Body>
                                 </CardItem>
+                            </CardItem>
                             </Card>
                         </View>
                     )
