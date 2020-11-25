@@ -13,4 +13,4 @@ web-build/
 .DS_Store
 
 //variable de entorno
-enviroment.js
+environment.js
