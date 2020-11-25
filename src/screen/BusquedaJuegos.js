@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text, Dimensions, Image } from "react-native";
 import { Container, H1, Spinner, Card, CardItem, Body, H3} from "native-base";
 import backend from "../api/backend";
-import getEnvVars from "../../enviroment";
+import getEnvVars from "../../environment";
 import { FlatList } from "react-native-gesture-handler";
 
 

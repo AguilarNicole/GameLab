@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Image, Dimensions } from "react-native";
 import { Content, H1, Spinner, Card } from "native-base";
-import getEnvVars from "../../enviroment";
+import getEnvVars from "../../environment";
 import backend from "../api/backend";
 
 const { apiUrl, apikey,  apiImageUrl, apiImageSize } = getEnvVars();
